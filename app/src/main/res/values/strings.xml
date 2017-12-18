@@ -1,0 +1,61 @@
+<resources>
+    <string name="app_name">Blood Donation</string>
+    <string name="regi">Register</string>
+    <string name="sign">Sign In</string>
+    <string name="donate">Donate Blood</string>
+    <string name="request">Request Blood</string>
+    <string name="about">About Us</string>
+    <string name="req">Requirements</string>
+    <string name="giving_living">GIVING = LIVING</string>
+    <string name="click_anywhere">Click anywhere to continue</string>
+    <string name="sign_in">Sign In</string>
+    <string name="or">OR</string>
+    <string name="login_via_facebook">Login via facebook</string>
+    <string name="email_id">Email ID:</string>
+    <string name="password">New Password:</string>
+    <string name="name">Name:</string>
+    <string name="age">Age:</string>
+    <string name="blood_group">Blood Group:</string>
+    <string name="weight_in_kgs">Weight (in kgs):</string>
+    <string name="register">Register</string>
+    <string name="heading1">There are certain requirements that should be satisfied if a person is donating:</string>
+    <string name="pt1">You are fit and healthy.</string>
+    <string name="pt2">You are aged 16-70.</string>
+    <string name="pt3">You weigh more than 45kg.</string>
+    <string name="pt4">It\'s been more than 6 months since you got a tattoo.</string>
+    <string name="pt5">Your Blood Pressure is stable, and if it is not stable you are taking the Blood Pressure medication.</string>
+    <string name="pt6">You should not be under the influence of alcohol.</string>
+    <string name="pt7">You should not be pregnant or breastfeeding.</string>
+    <string name="avail">Your Blood Group is available</string>
+    <string name="donate2">Request</string>
+    <string name="blood_group2">Blood Group:</string>
+    <string name="age2">Age:</string>
+    <string name="weight2">Weight:</string>
+    <string name="you_are_eligible_to_donate">You are eligible to donate</string>
+    <string name="declaration">I hereby declare that the above stated details are true to my knowledge. I also state that I am not pregnant, do not have a high blood pressure and have not been under the influence of drugs or alcohol in the past 4 weeks.</string>
+    <string name="donate3">Donate</string>
+    <string name="state">You can reach Indian Blood Services by any one of the following ways:</string>
+    <string name="phoneca">Toll Free Phone:</string>
+    <string name="phoneno">1 888 2 DONATE (1-888-236-6283)</string>
+    <string name="emailca">Email ID:</string>
+    <string name="email">feedback@blood.ca</string>
+    <string name="blood_prompt">A+</string>
+    <string name="signout">Sign Out</string>
+    <string name="contact">Contact:</string>
+    <string name="confirm">Type again:</string>
+    <string name="editDetails">Edit Details</string>
+    <string name="chan">Change Details</string>
+    <string name="change_password">Change Password</string>
+    <string name="changehogayapass">Password:</string>
+
+    <string-array name="blood_arrays">
+        <item>A+</item>
+        <item>B+</item>
+        <item>O+</item>
+        <item>AB+</item>
+        <item>A-</item>
+        <item>B-</item>
+        <item>O-</item>
+        <item>AB-</item>
+    </string-array>
+</resources>

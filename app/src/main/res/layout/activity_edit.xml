@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.admin1.blooddonation.EditAct"
+    android:gravity="center">
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="15dp"
+                        android:text="Current Password:"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                        android:textSize="22sp" />
+
+                    <EditText
+                        android:id="@+id/passOld"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:background="#d0d3d4"
+                        android:enabled="true"
+                        android:inputType="textPassword"
+                        android:maxLines="1"
+                        android:paddingEnd="4dp"
+                        android:paddingStart="4dp"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textSize="22sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="43dp"
+                        android:text="@string/password"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                        android:textSize="22sp" />
+
+                    <EditText
+                        android:id="@+id/passNew"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:background="#d0d3d4"
+                        android:enabled="true"
+                        android:inputType="textPassword"
+                        android:maxLines="1"
+                        android:paddingEnd="4dp"
+                        android:paddingStart="4dp"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textSize="22sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="80dp"
+                        android:text="@string/confirm"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                        android:textSize="22sp" />
+
+                    <EditText
+                        android:id="@+id/confirmNew"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:background="#d0d3d4"
+                        android:enabled="true"
+                        android:inputType="textPassword"
+                        android:maxLines="1"
+                        android:paddingEnd="4dp"
+                        android:paddingStart="4dp"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textSize="22sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginTop="20dp">
+
+                    <Button
+                        android:id="@+id/change"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:width="250dp"
+                        android:background="#c70039"
+                        android:onClick="changepass"
+                        android:text="@string/change_password"
+                        android:textAllCaps="true"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                        android:textSize="22sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="70dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="95dp"
+                        android:text="@string/contact"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                        android:textSize="22sp" />
+
+                    <EditText
+                        android:id="@+id/contactNew"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:background="#d0d3d4"
+                        android:enabled="true"
+                        android:inputType="number"
+                        android:maxLines="1"
+                        android:paddingEnd="4dp"
+                        android:paddingStart="4dp"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textSize="22sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="235dp"
+                        android:text="@string/age"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                        android:textSize="22sp" />
+
+                    <EditText
+                        android:id="@+id/ageNew"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:background="#d0d3d4"
+                        android:enabled="true"
+                        android:inputType="number"
+                        android:maxLines="1"
+                        android:paddingEnd="4dp"
+                        android:paddingStart="4dp"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textSize="22sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="125dp"
+                        android:text="@string/weight_in_kgs"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                        android:textSize="22sp" />
+
+                    <EditText
+                        android:id="@+id/wtNew"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:background="#d0d3d4"
+                        android:enabled="true"
+                        android:inputType="numberDecimal"
+                        android:maxLines="1"
+                        android:paddingEnd="4dp"
+                        android:paddingStart="4dp"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textSize="22sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center">
+
+                    <Button
+                        android:id="@+id/detailsButton"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:background="#c70039"
+                        android:onClick="editDetails"
+                        android:text="@string/chan"
+                        android:textAllCaps="true"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                        android:textSize="22sp" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </ScrollView>
+
+</RelativeLayout>

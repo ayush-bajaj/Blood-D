@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.admin1.blooddonation.RequestBlood">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="30dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:text="@string/blood_group2"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/bg"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:background="#d0d3d4"
+            android:focusable="false"
+            android:inputType="text"
+            android:paddingEnd="4dp"
+            android:paddingStart="4dp"
+            android:textSize="24sp" />
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/colorc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/avail"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="@android:color/holo_green_light"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/reqbut"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:background="#c70039"
+                android:enabled="false"
+                android:onClick="Request"
+                android:text="@string/donate2"
+                android:textSize="24sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
