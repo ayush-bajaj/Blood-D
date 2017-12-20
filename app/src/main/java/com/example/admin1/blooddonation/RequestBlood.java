@@ -3,7 +3,9 @@ package com.example.admin1.blooddonation;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.location.Location;
 import android.net.Uri;
+import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -21,9 +23,11 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
+import java.util.Set;
 
 
 public class RequestBlood extends AppCompatActivity {
@@ -106,17 +110,51 @@ public class RequestBlood extends AppCompatActivity {
         myRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
+
                 Map<String, Object> td = (Map<String, Object>) dataSnapshot.getValue();
                 Iterator it = td.entrySet().iterator();
-                Map.Entry<String, Object> me = (Map.Entry<String, Object>) it.next();
-                while (Integer.parseInt(me.getKey()) == hashfn(Registration.curUser.email)) {
-                    me = (Map.Entry<String, Object>) it.next();
+
+                double minDis = Double.MAX_VALUE;
+                final Map<String,String> td2 = new HashMap<String, String>();
+
+                while(it.hasNext())
+                {
+                    Map.Entry<String, Object> me = (Map.Entry<String, Object>) it.next();
+
+                    if(Integer.parseInt(me.getKey()) == hashfn(Registration.curUser.email))
+                        continue;
+
+                    Map<String, String> td1 = (Map<String, String>) me.getValue();
+                    Iterator it2 = td1.entrySet().iterator();
+                    Map.Entry<String, Object> m2e = (Map.Entry<String, Object>) it2.next();
+                    while(!m2e.getKey().equals("loc"))
+                    {
+                        m2e = (Map.Entry<String, Object>) it2.next();
+                    }
+                    Map<String,Double> loc = (Map<String,Double> ) m2e.getValue();
+                    myLocation curLoc = (myLocation) Registration.curUser.loc;
+                    float[] result = new float[1];
+                    Location.distanceBetween(curLoc.getLat(),curLoc.getLng(),loc.get("lat"),loc.get("lng"),result);
+
+                    if(result[0] < minDis)
+                    {
+                        minDis = result[0];
+                        Iterator it3 = td1.entrySet().iterator();
+                        while(it3.hasNext())
+                        {
+                            Map.Entry<String,String> m3e = (Map.Entry<String, String>) it3.next();
+                            td2.put(m3e.getKey(),m3e.getValue());
+                        }
+                    }
                 }
-                final Map<String, String> td2 = (Map<String, String>) me.getValue();
-                String s = "Thankyou for using our services, The matched user details are shown below. Press Proceed to Confirm or Cancel to go back to home screen: \n";
+
+                String s = "Thankyou for using our services, The closest matched user details are shown below. Press Proceed to Confirm or Cancel to go back to home screen: \n";
 
                 s = s + "Name: " + td2.get("name") + "\n";
                 s = s + "Email: " + td2.get("email") + "\n";
+                minDis = minDis / 1000;
+                String minDisT = String.format("%.2f", minDis);
+                s = s + "Distance from your location: " + minDisT + "km\n";
                 s = s + "Contact Number: " + td2.get("contact");
 
                 String emailT = td2.get("email");

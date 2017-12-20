@@ -47,6 +47,9 @@
     <string name="chan">Change Details</string>
     <string name="change_password">Change Password</string>
     <string name="changehogayapass">Password:</string>
+    <string name="contactNewText">Contact:</string>
+    <string name="send_otp">Send OTP</string>
+    <string name="login_using_the_otp_sent_on_the_verified_mobile_number_and_change_your_password_through_edit_details_option">Login using the OTP sent on the verified mobile number and Change your password through Edit Details option.</string>
 
     <string-array name="blood_arrays">
         <item>A+</item>

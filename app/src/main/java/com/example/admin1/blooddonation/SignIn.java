@@ -99,7 +99,7 @@ public class SignIn extends AppCompatActivity {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
 
-                Registration.User user1 = dataSnapshot.getValue(Registration.User.class);
+                User user1 = dataSnapshot.getValue(User.class);
                 String fetchpass = "";
 
                 if(user1 != null) {
